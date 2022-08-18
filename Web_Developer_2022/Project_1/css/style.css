@@ -1,0 +1,10 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.promo {
+  height: 800px;
+  background: url('../img/bg/main_bg.jpg') center center/cover no-repeat;
+}
