@@ -7,16 +7,19 @@
   padding: 0;
 }
 
+.container {    /* контэйнер секции */
+  position: relative;
+  width: 1140px;
+  margin: 0 auto;
+}
+
 .promo {    /* первая секция */
-  height: 800px;
+  min-height: 800px;
   background: url('../img/bg/main_bg.jpg') center center/cover no-repeat;
   padding: 39px 0 62px 0;
 }
 
-.conteiner {    /* контэйнер секции promo */
-  width: 1140px;
-  margin: 0 auto;
-}
+
 
 .logo .logo_img {   /* лого в promo */
   display: block;
@@ -38,9 +41,6 @@ h1 {
   margin-top: 53px;
 }
 
-h2.title {
-  margin-top: 30px;
-}
 
 .title {    /* текст в шапке */
   font-family: Roboto;
@@ -50,6 +50,10 @@ h2.title {
   text-transform: uppercase;
   color: #f9bf3b;
   text-align: center;
+}
+
+h2.title {
+  margin-top: 30px;
 }
 
 .simple .title_big {    /* текст в шапке */
@@ -76,11 +80,12 @@ h2.title {
 .promo .promo_text span {
   font-weight: 700;
   color: #f9bf3b;
+  font-weight: 700;
 }
 
-.promo .promo_btn {
+.promo .promo_btn, .gift .gift_btn {
   display: block;
-  margin: 73px auto;
+  margin: 0px auto;
   width: 313px;
   height: 72px;
   box-shadow: inset 0px 0px 0px rgba(0,0,0,0.18); /* тень */
@@ -95,6 +100,12 @@ h2.title {
   text-shadow: -1px -1px 0px rgba(0,0,0,0.22);
   color: #ffffff;
   cursor: pointer;
+}
+
+.gift .gift_btn {
+  margin-top: 52px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  border: none;
 }
 
 .more {
@@ -120,18 +131,22 @@ h2.title {
                                         /* Вторая секция */
 
 .waiting {
-  height: 604px;
+  min-height: 604px;      /* добавлен параметр min что бы при изменении контента не рвало блоки */
   background-color: #efefef;
   padding: 85px 0 75px 0;
 }
 
-.waiting .waiting_header {
+.waiting .waiting_header, .finish .finish_header {
   color: #252525;
   font-family: Roboto;
   font-size: 30px;
   font-weight: 400px;
   text-transform: uppercase;
   text-align: center;
+}
+
+.finish .finish_header {
+  color: #fff;
 }
 
 .waiting .waiting_divider {
@@ -152,13 +167,14 @@ h2.title {
 }
 
 .waiting .waiting_wrapper {
+  display: flex;
+  justify-content: space-between;
   margin-top: 45px;
 }
 
 .waiting .waiting_wrapper .waiting_item {
-  display: inline-block;    /* выравниваем по горизонтали */
-  vertical-align: top;      /* прижимаем к верху */
-  margin: 0 15px;
+  /* display: inline-block;    выравниваем по горизонтали, убрали так как flex */
+  /*vertical-align: top;       прижимаем к верху, убрали так как flex */
   width: 339px;
   text-align: center;
 }
@@ -175,3 +191,62 @@ h2.title {
   font-weight: 300;
   color: #4a4a4a;
 }
+
+                                    /* flex-box 
+
+.my-flex-container {
+  display: flex;
+  flex-wrap: wrap;  разрешает переносить элементы на новую строку 
+  flex-direction: column;  изменение главной оси на вертикальную 
+  justify-content: space-around;  Выравновает элементы по главной оси
+  align-items: center;  Выравнивание по поперечной оси 
+  height: 450px;
+}
+
+
+.my-flex-block {
+  width: 150px;
+  height: 150px;
+  margin: 0 50px;
+  background-color: red;
+  text-align: center;
+  color: #fff;
+}*/
+
+.optimization {
+  min-height: 550px;
+  padding: 102px 0 107px 0;
+}
+
+.optimization .optimization_header {
+  margin-left: 391px;
+  color: #299cbd;
+  font-family: "Roboto - Black";
+  font-size: 29px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.optimization .optimization_text {
+  margin-top: 25px;
+  margin-left: 391px;
+  color: #4a4a4a;
+  font-size: 17px;
+  font-weight: 300px;
+  font-family: "Roboto Light";
+  font-weight: 300;
+  line-height: 27px;
+}
+
+.optimization .optimization_text span {
+  font-family: "Roboto - Bold";
+  font-weight: 700;
+}
+
+.optimization .optimization_img {
+  position: absolute;
+  top: -54px;
+  left: -240px;
+  z-index: -1;
+}
+
