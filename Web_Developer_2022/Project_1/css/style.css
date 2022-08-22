@@ -1,4 +1,4 @@
-
+                                        
                                         /* Первая секция */
 
 * {     /* общие настройки контэйнеров */
@@ -6,6 +6,12 @@
   margin: 0;
   padding: 0;
 }
+
+/*            1й вариант подключения шрифтов 
+html {  
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+} */
+
 
 .container {    /* контэйнер секции */
   position: relative;
@@ -43,7 +49,6 @@ h1 {
 
 
 .title {    /* текст в шапке */
-  font-family: Roboto;
   font-size: 41px;
   line-height: 24px;
   font-weight: 900;
@@ -169,7 +174,7 @@ h2.title {
 
 .waiting .waiting_wrapper {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   margin-top: 45px;
 }
 
